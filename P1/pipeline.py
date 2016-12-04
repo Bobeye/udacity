@@ -100,22 +100,28 @@ def img_pipeline_line(image):
 
 
 if __name__=='__main__':
-	white_seg = "white_seg.mp4"
-	clip1 = VideoFileClip("solidWhiteRight.mp4")
-	sub_clip = clip1.fl_image(img_pipeline_seg)
-	sub_clip.write_videofile(white_seg, audio=False)
+	files = glob.glob('test_images/'+'*.jpg')
+	image = mpimg.imread(files[4])
+	process_image(image)
+	plt.show()
 
-	white_line = "white_line.mp4"
-	clip1 = VideoFileClip("solidWhiteRight.mp4")
-	sub_clip = clip1.fl_image(img_pipeline_line)
-	sub_clip.write_videofile(white_line, audio=False)
 
-	yelloe_seg = "yelloe_seg.mp4"
-	clip1 = VideoFileClip("solidYellowLeft.mp4")
-	sub_clip = clip1.fl_image(img_pipeline_seg)
-	sub_clip.write_videofile(yelloe_seg, audio=False)
+	# white_seg = "white_seg.mp4"
+	# clip1 = VideoFileClip("solidWhiteRight.mp4")
+	# sub_clip = clip1.fl_image(img_pipeline_seg)
+	# sub_clip.write_videofile(white_seg, audio=False)
 
-	yelloe_line = "yelloe_line.mp4"
-	clip1 = VideoFileClip("solidYellowLeft.mp4")
-	sub_clip = clip1.fl_image(img_pipeline_line)
-	sub_clip.write_videofile(yelloe_line, audio=False)
+	# white_line = "white_line.mp4"
+	# clip1 = VideoFileClip("solidWhiteRight.mp4")
+	# sub_clip = clip1.fl_image(img_pipeline_line)
+	# sub_clip.write_videofile(white_line, audio=False)
+
+	# yelloe_seg = "yelloe_seg.mp4"
+	# clip1 = VideoFileClip("solidYellowLeft.mp4")
+	# sub_clip = clip1.fl_image(img_pipeline_seg)
+	# sub_clip.write_videofile(yelloe_seg, audio=False)
+
+	# yelloe_line = "yelloe_line.mp4"
+	# clip1 = VideoFileClip("solidYellowLeft.mp4")
+	# sub_clip = clip1.fl_image(img_pipeline_line)
+	# sub_clip.write_videofile(yelloe_line, audio=False)
